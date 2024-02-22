@@ -1,0 +1,19 @@
+@import '../common/variables/colors';
+@import '../common/variables/sizes';
+@import '../common/mixins/mixins';
+@import '../common/variables/clip-paths';
+
+.snes-container {
+  position: relative;
+  padding: $size-e-l;
+  background-color: transparent;
+  @include pixelated-border;
+  @include generate-shadow-shine;
+  @include set-background-colors;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $size-e-m;
+    }
+  }
+}

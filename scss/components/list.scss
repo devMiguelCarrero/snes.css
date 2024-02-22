@@ -1,0 +1,34 @@
+@use '../common/icons/list-icon.scss' as l;
+
+@import '../common/variables/colors';
+@import '../common/variables/pixels';
+@import '../common/variables/sizes';
+@import '../common/variables/typography';
+
+.snes-list {
+  position: relative;
+  padding-inline-start: $size-e-m;
+  list-style-type: none;
+  li {
+    position: relative;
+    @include paragraph-size;
+    margin-bottom: $size-e-xxxs;
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(-1.2em * 2);
+      top: calc(-4em / #{l.$icon-height});
+      @include l.list-icon-before(calc(1.2em / 10));
+    }
+  }
+
+  @each $name, $color in $main-colors {
+    &.is-#{$name}-list-color {
+      li {
+        &::before {
+          @include l.list-icon-before(calc(1.2em / 10), $main-color: $color);
+        }
+      }
+    }
+  }
+}

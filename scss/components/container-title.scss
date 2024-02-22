@@ -1,0 +1,28 @@
+@import '../common/variables/colors';
+@import '../common/variables/pixels';
+@import '../common/variables/sizes';
+@import '../common/variables/typography';
+
+.snes-container-title {
+  position: relative;
+  width: fit-content;
+  @include title-size;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: $pixel-regular;
+    background-color: $color-plumber;
+    position: absolute;
+    bottom: calc(0% - #{$pixel-regular});
+    left: 0;
+  }
+
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-underline {
+      &::after {
+        background-color: $color;
+      }
+    }
+  }
+}

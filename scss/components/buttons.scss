@@ -1,0 +1,18 @@
+@import '../common/variables/colors';
+@import '../common/variables/pixels';
+@import '../common/variables/typography';
+@import '../common/variables/clip-paths';
+@import '../common/mixins/mixins';
+
+.snes-button {
+  position: relative;
+  background-color: $color-nature;
+  padding: 4px 18px;
+  cursor: pointer;
+  display: inline-block;
+  @include pixelated-border;
+  @include button-size;
+  @include set-colors;
+  @include generate-shadow-shine;
+  @include generate-shadow-shine-active;
+}
