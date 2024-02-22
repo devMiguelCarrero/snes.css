@@ -1,0 +1,51 @@
+// Breakpoints definition
+$phone: 480px; // Small phones
+$phone-lg: 576px; // Large phones
+$tablet: 768px; // Tablets
+$tablet-lg: 992px; // Large tablets
+$desktop: 1200px; // Desktops
+$desktop-lg: 1400px; // Large desktops
+$desktop-xl: 1600px; // Extra large desktops
+
+// Mixins for media queries
+@mixin phone {
+  @media screen and (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin phone-lg {
+  @media screen and (max-width: $phone-lg) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media screen and (max-width: $tablet-lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media screen and (max-width: $desktop-lg) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media screen and (max-width: $desktop-xl) {
+    @content;
+  }
+}

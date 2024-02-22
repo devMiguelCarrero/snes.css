@@ -1,0 +1,74 @@
+//Text & border color
+$color-dusk: #2c3e50;
+$main-color: $color-dusk;
+
+@function background-illumination($hex, $opacity) {
+  @return rgba(red($hex), green($hex), blue($hex), $opacity);
+}
+
+// Main Colors
+$color-plumber: #f22561; // Plumber Red
+$color-nature: #4bb244; // Nature Green
+$color-sunshine: #f2c019; // Sunshine Yellow
+$color-ocean: #4eb6d9; // Ocean Blue
+$color-turquoise: #40e0d0; // Turquoise
+$color-phantom: #9b5de5; // Phantom Purple
+$color-rose: #f784b2; // Rose
+$color-galaxy: #5a7d9a; // Galaxy Blue
+$color-ember: #ff6f00; // Lava Orange
+
+// Background Colors
+$background-white: #fff; // Pure White
+$background-grey: #e5e5e5; // Grey
+$background-aged-yellow: #fcf4d9; // Aged Yellow (inspired by the yellowing of consoles over time)
+$background-secondary-purple: #f0e4ff; // Secondary SNES Purple (very light, inspired by SNES's secondary color)
+$background-soft-green: #e2f4ea; // Soft Green (my suggestion, designed to be light and refreshing)
+
+$button-shine: background-illumination(#fff, 0.3);
+$button-shadow: background-illumination(#000, 0.2);
+$button-hover-shine: background-illumination(#fff, 0.4);
+$button-hover-shadow: background-illumination(#000, 0.3);
+
+// Main Colors Array (excluding black)
+$main-colors: (
+  'plumber': $color-plumber,
+  'nature': $color-nature,
+  'sunshine': $color-sunshine,
+  'ocean': $color-ocean,
+  'turquoise': $color-turquoise,
+  'phantom': $color-phantom,
+  'rose': $color-rose,
+  'galaxy': $color-galaxy,
+  'ember': $color-ember,
+);
+
+// Background Colors Set
+$background-colors: (
+  'white': $background-white,
+  'grey': $background-grey,
+  'aged-yellow': $background-aged-yellow,
+  'secondary-purple': $background-secondary-purple,
+  'soft-green': $background-soft-green,
+);
+
+@mixin set-background-colors {
+  @each $name, $background in $background-colors {
+    &.has-#{$name}-bg {
+      background-color: $background;
+    }
+  }
+}
+
+@mixin set-colors {
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-color {
+      background-color: $color;
+    }
+  }
+}
+
+@each $name, $color in $main-colors {
+  .text-#{$name}-color {
+    color: $color;
+  }
+}

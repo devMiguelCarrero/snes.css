@@ -1,0 +1,85 @@
+@import '../variables/pixels';
+@import '../variables/colors';
+
+$border-image: url('../assets/img/frame-hd.png');
+
+@mixin pixelize($matrix, $size, $colors) {
+  $ret: '';
+
+  @for $i from 1 through length($matrix) {
+    $row: nth($matrix, $i);
+
+    @for $j from 1 through length($row) {
+      $dot: nth($row, $j);
+
+      @if $dot != 0 {
+        @if $ret != '' {
+          $ret: $ret + ',';
+        }
+
+        $color: nth($colors, $dot);
+        $ret: $ret + ($j * $size) + ' ' + ($i * $size) + ' ' + $color;
+      }
+    }
+  }
+
+  box-shadow: unquote($ret + ';');
+}
+
+@mixin pixelated-border {
+  $border-width: $pixel-regular * 2;
+  $border-image-slice: $pixel-regular * 3;
+  border: solid;
+  border-image: $border-image;
+  border-image-slice: 12;
+  border-width: $border-width;
+  border-image-outset: $pixel-regular;
+  border-image-repeat: initial;
+}
+
+@mixin generate-shadow-shine {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 0;
+    width: calc(100% + (#{$pixel-regular} * 3));
+    height: calc(#{$pixel-regular} * 3);
+  }
+
+  &::before {
+    background-color: $button-shadow;
+    left: calc(0% - #{$pixel-regular});
+    top: calc(100% - (#{$pixel-regular}));
+    clip-path: generate-clip-path($shadow-shine);
+  }
+
+  &::after {
+    background-color: $button-shine;
+    right: calc(0% - #{$pixel-regular});
+    bottom: calc(100% - (#{$pixel-regular}));
+    transform: rotate(0.5turn);
+    clip-path: generate-clip-path($shadow-shine);
+  }
+
+  &:hover {
+    &::before {
+      background-color: $button-hover-shadow;
+    }
+    &::after {
+      background-color: $button-hover-shine;
+    }
+  }
+}
+
+@mixin generate-shadow-shine-active {
+  &:active {
+    &::before {
+      background-color: $button-shine;
+    }
+    &::after {
+      background-color: $button-shadow;
+    }
+  }
+}

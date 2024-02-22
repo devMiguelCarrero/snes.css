@@ -1,0 +1,37 @@
+@import './pixels';
+
+$shadow-shine: (
+  0 calc(#{$pixel-regular} * 2),
+  calc(100% - (#{$pixel-regular} * 2))
+    calc(#{$pixel-regular} * 2),
+  calc(100% - (#{$pixel-regular} * 2)) #{$pixel-regular},
+  calc(100% - #{$pixel-regular}) #{$pixel-regular},
+  calc(100% - #{$pixel-regular}) 0,
+  100% 0,
+  100% calc(#{$pixel-regular} * 2),
+  calc(100% - #{$pixel-regular}) calc(#{$pixel-regular} * 2),
+  calc(100% - #{$pixel-regular}) 100%,
+  0 100%
+);
+
+$shadow-shine-small: (
+  0 #{$pixel-regular},
+  calc(100% - #{$pixel-regular}) #{$pixel-regular},
+  calc(100% - #{$pixel-regular}) 0,
+  100% 0,
+  100% #{$pixel-regular},
+  calc(100% - #{$pixel-regular}) #{$pixel-regular},
+  calc(100% - #{$pixel-regular}) 100%,
+  0 100%
+);
+
+@function generate-clip-path($points) {
+  $value: 'polygon(';
+
+  @each $point in $points {
+    $value: $value + $point + ', ';
+  }
+
+  $value: unquote(str-slice($value, 1, str-length($value) - 2));
+  @return $value + ')';
+}

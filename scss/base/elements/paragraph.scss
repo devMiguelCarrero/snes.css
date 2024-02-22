@@ -1,0 +1,5 @@
+@import '../../common/variables/typography.scss';
+
+p {
+  @include paragraph-size;
+}

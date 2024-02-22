@@ -1,0 +1,21 @@
+@import '../../common/variables/typography';
+@import '../../common/variables/colors';
+
+html,
+body {
+  background-color: $background-grey;
+  font-family: $main-font;
+  max-width: 100vw;
+  font-size: 35px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  line-height: $main-line-height;
+}
