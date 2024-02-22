@@ -1,0 +1,29 @@
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (screen and max-width: 980px) {
+    padding: 0 10px;
+  }
+}
+
+.main-container > * {
+  margin-bottom: 1.2rem;
+}
+
+.item-grid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
