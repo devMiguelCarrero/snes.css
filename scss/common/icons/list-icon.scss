@@ -4,13 +4,13 @@
 $icon-width: 10;
 $icon-height: 10;
 
-@mixin list-icon($icon-pixel-dimmension, $main-color: $color-nature) {
+@mixin list-icon($icon-pixel-dimmension) {
   $sprite-colors: (
     #000000,
     #ffffff,
-    $main-color,
-    mix($main-color, white, 55%),
-    mix($main-color, black, 70%)
+    currentColor,
+    color-mix(in srgb, currentColor, white 55%),
+    color-mix(in srgb, currentColor, black 70%)
   );
   $sprite: (
     (0, 0, 0, 1, 1, 1, 1, 0, 0, 0),
@@ -43,13 +43,13 @@ $icon-height: 10;
   }
 }
 
-@mixin list-icon-before($icon-pixel-dimmension, $main-color: $color-nature) {
+@mixin list-icon-before($icon-pixel-dimmension) {
   $sprite-colors: (
     #000000,
     #ffffff,
-    $main-color,
-    mix($main-color, white, 55%),
-    mix($main-color, black, 70%)
+    currentColor,
+    color-mix(in srgb, currentColor, white 55%),
+    color-mix(in srgb, currentColor, black 70%)
   );
   $sprite: (
     (0, 0, 0, 1, 1, 1, 1, 0, 0, 0),

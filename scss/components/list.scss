@@ -18,6 +18,7 @@
       position: absolute;
       left: calc(-1.2em * 2);
       top: calc(-4em / #{l.$icon-height});
+      color: $color-plumber;
       @include l.list-icon-before(calc(1.2em / 10));
     }
   }
@@ -26,7 +27,7 @@
     &.is-#{$name}-list-color {
       li {
         &::before {
-          @include l.list-icon-before(calc(1.2em / 10), $main-color: $color);
+          color: $color;
         }
       }
     }
