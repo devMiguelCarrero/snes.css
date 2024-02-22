@@ -1,7 +1,7 @@
 {
   "name": "snes.css",
   "version": "0.0.1",
-  "description": "A retro-themed CSS framework inspired by the aesthetics of Super Nintendo.",
+  "description": "A retro-themed CSS framework inspired by the aesthetics of 16bit consoles",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
