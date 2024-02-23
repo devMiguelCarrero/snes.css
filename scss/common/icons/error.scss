@@ -1,0 +1,54 @@
+@import '../mixins/mixins';
+@import '../variables/colors';
+@import '../mixins/mixins';
+
+$icon-width: 17;
+$icon-height: 17;
+
+$sprite: (
+  (0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0),
+  (0, 0, 0, 1, 1, 4, 4, 4, 4, 3, 4, 3, 1, 1, 0, 0, 0),
+  (0, 0, 1, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 0, 0),
+  (0, 1, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 0),
+  (0, 1, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 0),
+  (1, 4, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 2, 3, 3, 3, 1),
+  (1, 4, 3, 3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 3, 3, 5, 1),
+  (1, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 1),
+  (1, 4, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 5, 1),
+  (1, 3, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 5, 1),
+  (1, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 3, 3, 3, 3, 5, 1),
+  (1, 3, 3, 3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 3, 3, 5, 1),
+  (0, 1, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 2, 3, 5, 1, 0),
+  (0, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 1, 0),
+  (0, 0, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 1, 0, 0),
+  (0, 0, 0, 1, 1, 3, 5, 3, 5, 5, 5, 5, 1, 1, 0, 0, 0),
+  (0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0)
+);
+
+$sprite-colors: (
+  #000000,
+  #ffffff,
+  $color-plumber,
+  color-mix(in srgb, $color-plumber, white 55%),
+  color-mix(in srgb, $color-plumber, black 50%)
+);
+
+@mixin error-icon($icon-pixel-dimmension) {
+  @include render-icon(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
+
+@mixin error-icon-before($icon-pixel-dimmension) {
+  @include render-icon-before(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
