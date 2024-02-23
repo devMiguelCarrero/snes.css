@@ -2,76 +2,44 @@
 @import '../variables/colors';
 
 $icon-width: 10;
-$icon-height: 10;
+$icon-height: 9;
+
+$sprite-colors: (
+  #000000,
+  #ffffff,
+  currentColor,
+  color-mix(in srgb, currentColor, white 55%),
+  color-mix(in srgb, currentColor, black 70%)
+);
+
+$sprite: (
+  (0, 0, 0, 1, 1, 1, 1, 0, 0, 0),
+  (0, 0, 1, 4, 4, 4, 4, 1, 0, 0),
+  (0, 1, 4, 2, 3, 3, 3, 4, 1, 0),
+  (1, 4, 2, 3, 3, 3, 3, 3, 4, 1),
+  (1, 3, 3, 3, 3, 3, 3, 3, 3, 1),
+  (1, 5, 3, 3, 3, 3, 3, 3, 5, 1),
+  (0, 1, 3, 3, 3, 3, 3, 3, 1, 0),
+  (0, 0, 1, 5, 5, 5, 5, 1, 0, 0),
+  (0, 0, 0, 1, 1, 1, 1, 0, 0, 0)
+);
 
 @mixin list-icon($icon-pixel-dimmension) {
-  $sprite-colors: (
-    #000000,
-    #ffffff,
-    currentColor,
-    color-mix(in srgb, currentColor, white 55%),
-    color-mix(in srgb, currentColor, black 70%)
+  @include render-icon(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
   );
-  $sprite: (
-    (0, 0, 0, 1, 1, 1, 1, 0, 0, 0),
-    (0, 0, 1, 4, 4, 4, 4, 1, 0, 0),
-    (0, 1, 4, 2, 3, 3, 3, 4, 1, 0),
-    (1, 4, 2, 3, 3, 3, 3, 3, 4, 1),
-    (1, 3, 3, 3, 3, 3, 3, 3, 3, 1),
-    (1, 5, 3, 3, 3, 3, 3, 3, 5, 1),
-    (0, 1, 3, 3, 3, 3, 3, 3, 1, 0),
-    (0, 0, 1, 5, 5, 5, 5, 1, 0, 0),
-    (0, 0, 0, 1, 1, 1, 1, 0, 0, 0)
-  );
-
-  $icon-x-center-formula: ($icon-pixel-dimmension * $icon-width) / 2;
-  $icon-y-center-formula: ($icon-pixel-dimmension * $icon-height) / 2;
-  $icon-margin-y: $icon-y-center-formula - $icon-pixel-dimmension;
-  $icon-margin-x: $icon-x-center-formula - $icon-pixel-dimmension;
-
-  position: relative;
-
-  margin: $icon-margin-y $icon-margin-x;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -#{$icon-y-center-formula};
-    left: -#{$icon-x-center-formula};
-    @include pixelize($sprite, $icon-pixel-dimmension, $sprite-colors);
-  }
 }
 
 @mixin list-icon-before($icon-pixel-dimmension) {
-  $sprite-colors: (
-    #000000,
-    #ffffff,
-    currentColor,
-    color-mix(in srgb, currentColor, white 55%),
-    color-mix(in srgb, currentColor, black 70%)
+  @include render-icon-before(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
   );
-  $sprite: (
-    (0, 0, 0, 1, 1, 1, 1, 0, 0, 0),
-    (0, 0, 1, 4, 4, 4, 4, 1, 0, 0),
-    (0, 1, 4, 2, 3, 3, 3, 4, 1, 0),
-    (1, 4, 2, 3, 3, 3, 3, 3, 4, 1),
-    (1, 3, 3, 3, 3, 3, 3, 3, 3, 1),
-    (1, 5, 3, 3, 3, 3, 3, 3, 5, 1),
-    (0, 1, 3, 3, 3, 3, 3, 3, 1, 0),
-    (0, 0, 1, 5, 5, 5, 5, 1, 0, 0),
-    (0, 0, 0, 1, 1, 1, 1, 0, 0, 0)
-  );
-
-  $icon-x-center-formula: ($icon-pixel-dimmension * $icon-width) / 2;
-  $icon-y-center-formula: ($icon-pixel-dimmension * $icon-height) / 2;
-  $icon-margin-y: $icon-y-center-formula - $icon-pixel-dimmension;
-  $icon-margin-x: $icon-x-center-formula - $icon-pixel-dimmension;
-
-  margin: $icon-margin-y $icon-margin-x;
-
-  content: '';
-  width: $icon-pixel-dimmension;
-  height: $icon-pixel-dimmension;
-  @include pixelize($sprite, $icon-pixel-dimmension, $sprite-colors);
 }
