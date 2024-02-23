@@ -27,3 +27,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
+.columns-grid .grid-item {
+  padding: 15px;
+}

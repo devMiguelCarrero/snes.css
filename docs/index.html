@@ -85,19 +85,127 @@
           </ul>
         </div>
       </div>
-      <div class="snes-container has-white-bg">
+      <div class="snes-container has-grey-bg">
         <h3 class="snes-container-title has-ocean-underline">Inputs</h3>
-        <div class="snes-input">
-          <input type="text" value="" placeholder="Input text" />
+        <div class="snes-form-group">
+          <label>Input Text</label>
+          <div class="snes-input">
+            <input type="text" value="" placeholder="Input text" />
+          </div>
         </div>
-        <div class="snes-input">
-          <select class="snes-input">
-            <option>1</option>
-            <option>2</option>
-          </select>
+        <div class="snes-form-group">
+          <label>Success Input</label>
+          <div class="snes-input is-success">
+            <input
+              type="text"
+              value="This input has a correct value"
+              placeholder="Input text"
+            />
+          </div>
         </div>
-        <div class="snes-input">
-          <input type="date" />
+        <div class="snes-form-group">
+          <label>Warned Input</label>
+          <div class="snes-input is-warning">
+            <input
+              type="text"
+              value="This input has a warned value"
+              placeholder="Input text"
+            />
+          </div>
+        </div>
+        <div class="snes-form-group">
+          <label>Error Input</label>
+          <div class="snes-input is-error">
+            <input
+              type="text"
+              value="This input has a incorrect value"
+              placeholder="Input text"
+            />
+          </div>
+        </div>
+        <div class="snes-form-group">
+          <label>Date input</label>
+          <div class="snes-input">
+            <input type="date" />
+          </div>
+        </div>
+      </div>
+      <div class="snes-container has-white-bg">
+        <h3 class="snes-container-title has-ember-underline">Selects</h3>
+        <div class="snes-form-group">
+          <label>Select</label>
+          <div class="snes-input">
+            <select class="snes-input">
+              <option>1</option>
+              <option>2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="snes-container has-aged-yellow-bg">
+        <h3 class="snes-container-title has-rose-underline">Textareas</h3>
+        <div class="snes-form-group">
+          <label>Textarea</label>
+          <div class="snes-input">
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="snes-container has-grey-bg">
+        <h3 class="snes-container-title has-galaxy-underline">Range controls</h3>
+        <p>
+          Range tracks can have of any of the main colors and range thumbs can
+          have any of the background colors
+        </p>
+        <div id="ranges" class="columns-grid">
+          <div class="grid-item">
+            <input
+              type="range"
+              class="snes-range has-soft-green-thumb"
+              min="0"
+              max="100"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="range"
+              class="snes-range has-ocean-bg"
+              min="0"
+              max="100"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="range"
+              class="snes-range has-secondary-purple-thumb has-galaxy-bg"
+              min="0"
+              max="100"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="range"
+              class="snes-range has-aged-yellow-thumb has-ember-bg"
+              min="0"
+              max="100"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="range"
+              class="snes-range has-white-thumb has-turquoise-bg"
+              min="0"
+              max="100"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="range"
+              class="snes-range has-soft-green-thumb has-nature-bg"
+              min="0"
+              max="100"
+            />
+          </div>
         </div>
       </div>
     </main>
