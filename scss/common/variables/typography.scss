@@ -56,3 +56,27 @@ $word-spacing: -0.3em;
     font-size: 16px;
   }
 }
+
+@mixin input-size {
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: $letter-spacing;
+  word-spacing: $word-spacing;
+
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
+}
+
+@mixin label-size {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: $letter-spacing;
+  word-spacing: $word-spacing;
+
+  @media (max-width: 992px) {
+    font-size: 12px;
+  }
+}
