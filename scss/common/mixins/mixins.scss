@@ -83,3 +83,49 @@ $border-image: url('../assets/img/frame-hd.png');
     }
   }
 }
+
+@mixin render-icon(
+  $icon-pixel-dimmension,
+  $icon-width,
+  $icon-height,
+  $sprite,
+  $sprite-colors
+) {
+  $icon-x-center-formula: ($icon-pixel-dimmension * $icon-width) / 2;
+  $icon-y-center-formula: ($icon-pixel-dimmension * $icon-height) / 2;
+  $icon-margin-y: $icon-y-center-formula - $icon-pixel-dimmension;
+  $icon-margin-x: $icon-x-center-formula - $icon-pixel-dimmension;
+
+  position: relative;
+
+  margin: $icon-margin-y $icon-margin-x;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -#{$icon-y-center-formula};
+    left: -#{$icon-x-center-formula};
+    @include pixelize($sprite, $icon-pixel-dimmension, $sprite-colors);
+  }
+}
+
+@mixin render-icon-before(
+  $icon-pixel-dimmension,
+  $icon-width,
+  $icon-height,
+  $sprite,
+  $sprite-colors
+) {
+  $icon-x-center-formula: ($icon-pixel-dimmension * $icon-width) / 2;
+  $icon-y-center-formula: ($icon-pixel-dimmension * $icon-height) / 2;
+  $icon-margin-y: $icon-y-center-formula - $icon-pixel-dimmension;
+  $icon-margin-x: $icon-x-center-formula - $icon-pixel-dimmension;
+
+  margin: $icon-margin-y $icon-margin-x;
+
+  content: '';
+  width: $icon-pixel-dimmension;
+  height: $icon-pixel-dimmension;
+  @include pixelize($sprite, $icon-pixel-dimmension, $sprite-colors);
+}
