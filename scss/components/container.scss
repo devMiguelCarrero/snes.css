@@ -2,6 +2,7 @@
 @import '../common/variables/sizes';
 @import '../common/mixins/mixins';
 @import '../common/variables/clip-paths';
+@import '../common/variables/media-queries';
 
 .snes-container {
   position: relative;
@@ -10,6 +11,10 @@
   @include pixelated-border;
   @include generate-shadow-shine;
   @include set-background-colors;
+
+  @include tablet-lg {
+    padding: $size-e-xxxs;
+  }
 
   > * {
     &:not(:last-child) {

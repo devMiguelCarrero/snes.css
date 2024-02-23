@@ -1,27 +1,73 @@
+@use '../common/icons/error.scss' as e;
+
 @import '../common/variables/colors';
 @import '../common/variables/sizes';
 @import '../common/variables/typography';
 @import '../common/variables/clip-paths';
 @import '../common/mixins/mixins';
 
+$input-status: ('success' $color-nature), ('warning' $color-sunshine),
+  ('error' $color-plumber);
+
+.snes-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  label {
+    @include label-size;
+  }
+}
+
 .snes-input {
   position: relative;
   display: flex;
+  color: $background-white;
   @include pixelated-border;
-  background-color: $background-grey;
+  background-color: $background-white;
+
   input,
-  select {
+  select,
+  textarea {
     border: none;
     outline: none;
     width: 100%;
-    @include button-size;
+    color: $main-color;
+    @include input-size;
     background-color: transparent;
   }
 
   select {
+    cursor: pointer;
+    appearance: none;
     option {
-      background-color: $background-grey;
+      background-color: $background-white;
       padding: $size-e-xxxs;
+    }
+  }
+
+  $icon-error-dimmension: 2px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: calc(0% + (#{e.$icon-width} * ($icon-error-dimmension / 1.5)));
+    top: calc(50% - (#{e.$icon-height} * ($icon-error-dimmension / 1.02)));
+    color: $color-plumber;
+    z-index: 10;
+  }
+
+  @each $status, $color in $input-status {
+    &.is-#{$status} {
+      background-color: mix($color, white, 45%);
+      color: $color;
+    }
+  }
+
+  &:has(input) {
+    &.is-error {
+      &::before {
+        @include e.error-icon-before($icon-error-dimmension);
+      }
     }
   }
 }
