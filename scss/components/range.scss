@@ -1,0 +1,79 @@
+@import '../common/variables/colors';
+@import '../common/variables/sizes';
+@import '../common/variables/typography';
+@import '../common/variables/clip-paths';
+@import '../common/mixins/mixins';
+
+$icon-pixel-dimmension: 2px;
+$mega-buster-color: #ead48c;
+$mega-buster-color-hover: #f0ce69;
+$mega-man-color: #0180fe;
+
+$border-outset: 6px;
+$border-width: 12px;
+
+$thumb-dimension: 40px;
+$input-font: 'Press Start 2P', system-ui;
+
+@function background-illumination($hex, $opacity) {
+  @return rgba(red($hex), green($hex), blue($hex), $opacity);
+}
+
+$button-shine: background-illumination(#fff, 0.3);
+$button-shadow: background-illumination(#000, 0.2);
+$button-hover-shine: background-illumination(#fff, 0.4);
+$button-hover-shadow: background-illumination(#000, 0.3);
+
+.snes-range {
+  flex: 0.8;
+  position: relative;
+  appearance: none;
+  height: 10px;
+  background: $color-plumber;
+  width: 100%;
+  padding: 0;
+
+  @include pixelated-border;
+  @include generate-shadow-shine;
+
+  &::-webkit-slider-runnable-track {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: calc(-#{$border-outset} * 3);
+    margin-right: calc(-#{$border-outset} * 3);
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    position: relative;
+    width: calc(#{$thumb-dimension} + ((#{$thumb-dimension * 20}) / 100));
+    height: $thumb-dimension;
+    background-color: $background-aged-yellow;
+    cursor: grab;
+    transition: all 0.3s;
+    @include pixelated-border;
+    z-index: 5;
+
+    &:hover {
+      background-color: mix($background-aged-yellow, black, 90%);
+    }
+  }
+
+  @each $name, $background in $background-colors {
+    &.has-#{$name}-thumb {
+      &::-webkit-slider-thumb {
+        background-color: $background;
+        &:hover {
+          background-color: mix($background, black, 90%);
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-bg {
+      background: $color;
+    }
+  }
+}
