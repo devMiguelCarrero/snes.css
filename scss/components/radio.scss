@@ -1,0 +1,81 @@
+@use '../common/icons/diamond' as d;
+
+@import '../common/variables/colors';
+@import '../common/variables/sizes';
+@import '../common/variables/typography';
+@import '../common/variables/clip-paths';
+@import '../common/mixins/mixins';
+
+.snes-radio {
+  display: flex;
+  flex-direction: row;
+  gap: $size-e-xxs;
+  cursor: pointer;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  input {
+    display: none;
+
+    &:checked ~ .snes-radio__item__content {
+      &::before {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: $size-e-xs;
+    cursor: pointer;
+
+    &__content {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: calc(1em + (#{d.$icon-width}px / 2));
+      @include input-size;
+
+      &::before {
+        content: '';
+        display: block;
+        visibility: hidden;
+        color: $color-nature;
+        transform: translateY(calc(-13em / #{d.$icon-height}));
+        @include d.diamond-icon-before(calc(1.5em / 12));
+      }
+
+      &:hover {
+        color: $color-text-hover;
+      }
+    }
+
+    @each $name, $color in $main-colors {
+      &.has-#{$name}-icon {
+        .snes-radio__item__content {
+          &::before {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-icons {
+      .snes-radio__item {
+        .snes-radio__item__content {
+          &::before {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
