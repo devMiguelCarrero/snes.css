@@ -1,4 +1,6 @@
 @use '../common/icons/error.scss' as e;
+@use '../common/icons/approve.scss' as a;
+@use '../common/icons/warning.scss' as w;
 
 @import '../common/variables/colors';
 @import '../common/variables/sizes';
@@ -15,6 +17,10 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
   gap: 14px;
   label {
     @include label-size;
+  }
+
+  &:has(input[type='radio']) {
+    gap: $size-e-xs;
   }
 }
 
@@ -36,6 +42,12 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
     background-color: transparent;
   }
 
+  input[type='date'] {
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+
   select {
     cursor: pointer;
     appearance: none;
@@ -50,8 +62,7 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
   &::before {
     content: '';
     position: absolute;
-    right: calc(0% + (#{e.$icon-width} * ($icon-error-dimmension / 1.5)));
-    top: calc(50% - (#{e.$icon-height} * ($icon-error-dimmension / 1.02)));
+
     color: $color-plumber;
     z-index: 10;
   }
@@ -63,10 +74,28 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
     }
   }
 
-  &:has(input) {
+  &:has(input, textarea) {
     &.is-error {
       &::before {
+        right: calc(0% + (#{e.$icon-width} * ($icon-error-dimmension / 1.5)));
+        top: calc(50% - (#{e.$icon-height} * ($icon-error-dimmension)));
         @include e.error-icon-before($icon-error-dimmension);
+      }
+    }
+
+    &.is-success {
+      &::before {
+        right: calc(0% + (#{a.$icon-width} * ($icon-error-dimmension / 1.5)));
+        top: calc(50% - (#{a.$icon-height} * ($icon-error-dimmension)));
+        @include a.approve-icon-before($icon-error-dimmension);
+      }
+    }
+
+    &.is-warning {
+      &::before {
+        right: calc(0% + (#{w.$icon-width} * ($icon-error-dimmension / 1.5)));
+        top: calc(50% - (#{w.$icon-height} * ($icon-error-dimmension)));
+        @include w.warning-icon-before($icon-error-dimmension);
       }
     }
   }
