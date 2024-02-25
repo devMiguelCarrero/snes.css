@@ -1,0 +1,82 @@
+@use '../common/icons/checkbox' as d;
+@use '../common/icons/checkbox-empty' as x;
+
+@import '../common/variables/colors';
+@import '../common/variables/sizes';
+@import '../common/variables/typography';
+@import '../common/variables/clip-paths';
+@import '../common/mixins/mixins';
+
+.snes-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: $size-e-xxs;
+  cursor: pointer;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  input {
+    display: none;
+
+    &:checked ~ .snes-checkbox__item__content {
+      &::before {
+        @include d.checkbox-icon-before(calc(1.5em / 12));
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: $size-e-xs;
+    cursor: pointer;
+
+    &__content {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      gap: calc(1em + (#{d.$icon-width}px / 2));
+      @include input-size;
+
+      &::before {
+        content: '';
+        display: block;
+        color: $color-nature;
+        transform: translateY(calc(-14em / #{d.$icon-height}));
+        @include x.checkbox-empty-icon-before(calc(1.5em / 12));
+      }
+
+      &:hover {
+        color: $color-text-hover;
+      }
+    }
+
+    @each $name, $color in $main-colors {
+      &.has-#{$name}-icon {
+        .snes-checkbox__item__content {
+          &::before {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-icons {
+      .snes-checkbox__item {
+        .snes-checkbox__item__content {
+          &::before {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
