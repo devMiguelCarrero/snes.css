@@ -65,7 +65,8 @@ $word-spacing: -0.3em;
   word-spacing: $word-spacing;
 
   @media (max-width: 992px) {
-    font-size: 16px;
+    font-size: 12px;
+    word-spacing: -0.65em;;
   }
 }
 
@@ -77,6 +78,6 @@ $word-spacing: -0.3em;
   word-spacing: $word-spacing;
 
   @media (max-width: 992px) {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
