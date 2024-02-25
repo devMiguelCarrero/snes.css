@@ -1,0 +1,6 @@
+@import '../../common/variables/typography.scss';
+
+pre {
+  @include paragraph-size;
+  white-space: pre-line;
+}
