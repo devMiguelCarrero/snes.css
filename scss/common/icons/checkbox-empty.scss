@@ -1,0 +1,46 @@
+@import '../mixins/mixins';
+@import '../variables/colors';
+@import '../mixins/mixins';
+
+$icon-width: 15;
+$icon-height: 13;
+
+$sprite: (
+  (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+  (0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0),
+  (0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
+  (0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0),
+  (0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0)
+);
+
+$sprite-colors: (
+  #000000,
+);
+
+@mixin checkbox-empty-icon($icon-pixel-dimmension) {
+  @include render-icon(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
+
+@mixin checkbox-empty-icon-before($icon-pixel-dimmension) {
+  @include render-icon-before(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
