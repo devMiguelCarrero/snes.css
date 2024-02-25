@@ -37,6 +37,7 @@
       text-transform: uppercase;
       display: flex;
       flex-direction: row;
+      user-select: none;
       align-items: center;
       justify-content: center;
       gap: calc(1em + (#{d.$icon-width}px / 2));
