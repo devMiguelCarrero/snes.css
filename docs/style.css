@@ -16,7 +16,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1rem;
@@ -26,6 +26,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+.columns-grid.has-3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .columns-grid .grid-item {
