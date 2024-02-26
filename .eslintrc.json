@@ -1,0 +1,10 @@
+{
+  "extends": ["next/core-web-vitals", "next", "plugin:storybook/recommended"],
+  "root": true,
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Use the @tailwind directive to insert Tailwind's `base`, `components`, `utilities`, and `screens` styles into your CSS."
+    }
+  ]
+}

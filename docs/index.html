@@ -17,6 +17,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta name="author" content="Your Name or Organization" />
+    <link rel="stylesheet" href="./lib/highlight-theme.css" />
     <link rel="stylesheet" href="../dist/snes.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>SNES.CSS - A Retro pixel-art css framework</title>
@@ -46,7 +47,7 @@
       </div>
       <div class="snes-container has-aged-yellow-bg">
         <h3 class="snes-container-title">Buttons</h3>
-        <div id="buttons" class="item-grid">
+        <div id="buttons" class="item-grid code-grid">
           <button class="snes-button">Nature</button>
           <button class="snes-button has-plumber-color">Plumber</button>
           <button class="snes-button has-sunshine-color">Sunshine</button>
@@ -57,6 +58,7 @@
           <button class="snes-button has-galaxy-color">Galaxy</button>
           <button class="snes-button has-ember-color">Ember</button>
         </div>
+        <pre><button class="snes-button has-ocean-color code-button"><></button><code class="html hljs xml"></code></pre>
       </div>
       <div class="snes-container has-secondary-purple-bg">
         <h3 class="snes-container-title has-phantom-underline">Lists</h3>
@@ -308,6 +310,90 @@
           </div>
         </div>
       </div>
+      <div class="snes-container has-secondary-purple-bg">
+        <h3 class="snes-container-title has-sunshine-underline">Checkboxes</h3>
+        <p>
+          The checkbox icon colors can be selected individually or as a group
+        </p>
+        <div class="columns-grid">
+          <div class="snes-form-group">
+            <label>LEARNED WARP SONGS</label>
+            <div class="snes-checkbox snes-checkbox--vertical">
+              <label class="snes-checkbox__item has-nature-icon">
+                <input
+                  type="checkbox"
+                  name="warp-songs"
+                  value="minuet-of-forest"
+                  checked
+                />
+                <span class="snes-checkbox__item__content"
+                  >Minuet of Forest</span
+                >
+              </label>
+              <label class="snes-checkbox__item has-ember-icon">
+                <input
+                  type="checkbox"
+                  name="warp-songs"
+                  value="bolero-of-fire"
+                  checked
+                />
+                <span class="snes-checkbox__item__content">Bolero of Fire</span>
+              </label>
+              <label class="snes-checkbox__item has-ocean-icon">
+                <input
+                  type="checkbox"
+                  name="warp-songs"
+                  value="serenade-of-water"
+                />
+                <span class="snes-checkbox__item__content"
+                  >Serenade of water</span
+                >
+              </label>
+              <label class="snes-checkbox__item has-galaxy-icon">
+                <input
+                  type="checkbox"
+                  name="warp-songs"
+                  value="nocturne-of-shadow"
+                />
+                <span class="snes-checkbox__item__content"
+                  >Nocturne of Shadow</span
+                >
+              </label>
+              <label class="snes-checkbox__item has-sunshine-icon">
+                <input
+                  type="checkbox"
+                  name="warp-songs"
+                  value="requiem-of-spirits"
+                />
+                <span class="snes-checkbox__item__content"
+                  >Requiem of Spirit</span
+                >
+              </label>
+            </div>
+          </div>
+          <div class="snes-form-group">
+            <label>select archetypes you like</label>
+            <div class="snes-checkbox has-plumber-icons">
+              <label class="snes-checkbox__item">
+                <input type="checkbox" name="archetype" value="shoto" checked />
+                <span class="snes-checkbox__item__content">Shoto</span>
+              </label>
+
+              <label class="snes-checkbox__item">
+                <input type="checkbox" name="archetype" value="rushdown" />
+                <span class="snes-checkbox__item__content">Rushdown</span>
+              </label>
+
+              <label class="snes-checkbox__item">
+                <input type="checkbox" name="archetype" value="grappler" />
+                <span class="snes-checkbox__item__content">Grappler</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <script src="./lib/highlight.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
