@@ -4,8 +4,7 @@
   "description": "A retro-themed CSS framework inspired by the aesthetics of 16bit consoles",
   "main": "index.js",
   "scripts": {
-    "snes-build": "webpack --mode production",
-    "snes-dev": "webpack --mode development",
+    "snes-build": "webpack --mode production && webpack --mode development",
     "snes-watch": "webpack --watch",
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +18,7 @@
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
+    "babel-plugin-prismjs": "^2.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.0.0",
     "css-minimizer-webpack-plugin": "^6.0.0",
@@ -28,7 +28,13 @@
     "highlight.js": "^11.9.0",
     "html-webpack-plugin": "^5.0.0",
     "mini-css-extract-plugin": "^2.0.0",
+    "next": "^14.1.0",
     "postcss": "^8.4.35",
+    "postcss-loader": "^8.1.0",
+    "pretty": "^2.0.0",
+    "prismjs": "^1.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.32.0",
     "sass-loader": "^12.0.0",
     "tailwindcss": "^3.4.1",
@@ -37,10 +43,12 @@
     "webpack-cli": "^4.0.0",
     "webpack-remove-empty-scripts": "^1.0.4"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
-    "next": "^14.1.0",
-    "postcss-loader": "^8.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "classnames": "^2.5.1"
   }
 }

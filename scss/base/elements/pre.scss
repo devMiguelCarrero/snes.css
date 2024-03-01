@@ -3,4 +3,9 @@
 pre {
   @include paragraph-size;
   white-space: pre-line;
+
+  code {
+    @include paragraph-size;
+    white-space: pre-wrap;
+  }
 }

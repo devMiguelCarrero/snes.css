@@ -44,13 +44,4 @@ pre {
   margin: 0 -60px -60px -60px;
 }
 
-.code-button {
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-}
 
-.hljs {
-  vertical-align: baseline;
-  padding: 30px;
-}

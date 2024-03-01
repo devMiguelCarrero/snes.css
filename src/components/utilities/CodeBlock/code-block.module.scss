@@ -1,0 +1,47 @@
+@import '../../../../scss/common/variables/typography';
+
+.code-block {
+  position: relative;
+  margin-left: -60px;
+  margin-right: -60px;
+  margin-bottom: -60px;
+  margin-top: 80px;
+  @include paragraph-size;
+
+  .hljs {
+    vertical-align: baseline;
+    padding: 30px;
+  }
+
+  .code-button {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 10;
+  }
+
+  &.active {
+    .code-block__pre {
+      visibility: visible;
+      height: auto;
+    }
+  }
+
+  &__pre {
+    &[class*='language-'] {
+      padding: 0;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      visibility: hidden;
+      height: 0;
+    }
+
+    &__code {
+      &[class*='language-'] {
+        @include paragraph-size;
+        white-space: pre-wrap;
+      }
+    }
+  }
+}

@@ -1,3 +1,8 @@
+import ButtonGrid from '@/components/grid/ButtonGrid';
+import InputGrid from '@/components/grid/InputGrid';
+import ListGrid from '@/components/grid/ListGrid';
+import TextGrid from '@/components/grid/TextGrid';
+
 export default function Home() {
   return (
     <main className="main-container">
@@ -7,107 +12,10 @@ export default function Home() {
         veritatis vero laboriosam consequuntur, laborum enim tempore ad
         aspernatur? Culpa, sed!
       </p>
-      <div className="snes-container has-white-bg">
-        <h3 className="snes-container-title has-nature-underline">Texts</h3>
-        <div id="buttons" className="item-grid">
-          <p>Normal</p>
-          <p className="text-nature-color">Nature</p>
-          <p className="text-plumber-color">Plumber</p>
-          <p className="text-sunshine-color">Sunshine</p>
-          <p className="text-ocean-color">Ocean</p>
-          <p className="text-turquoise-color">Turquoise</p>
-          <p className="text-phantom-color">Phantom</p>
-          <p className="text-rose-color">Rose</p>
-          <p className="text-galaxy-color">Galaxy</p>
-          <p className="text-ember-color">Ember</p>
-        </div>
-      </div>
-      <div className="snes-container has-aged-yellow-bg">
-        <h3 className="snes-container-title">Buttons</h3>
-        <div id="buttons" className="item-grid code-grid">
-          <button className="snes-button">Nature</button>
-          <button className="snes-button has-plumber-color">Plumber</button>
-          <button className="snes-button has-sunshine-color">Sunshine</button>
-          <button className="snes-button has-ocean-color">Ocean</button>
-          <button className="snes-button has-turquoise-color">Turquoise</button>
-          <button className="snes-button has-phantom-color">Phantom</button>
-          <button className="snes-button has-rose-color">Rose</button>
-          <button className="snes-button has-galaxy-color">Galaxy</button>
-          <button className="snes-button has-ember-color">Ember</button>
-        </div>
-      </div>
-      <div className="snes-container has-secondary-purple-bg">
-        <h3 className="snes-container-title has-phantom-underline">Lists</h3>
-        <p>List icons can be of any of the main colors</p>
-        <div id="lists" className="columns-grid">
-          <ul className="snes-list is-plumber-list-color">
-            <li>Sorry, Mario</li>
-            <li>But the Princess</li>
-            <li>Is in another castle</li>
-          </ul>
-          <ul className="snes-list is-nature-list-color">
-            <li>Ma'am, you're mistaken.</li>
-            <li>I'm not a pet.</li>
-            <li>I'm a Knight.</li>
-            <li>And master swordsman.</li>
-          </ul>
-          <ul className="snes-list is-phantom-list-color">
-            <li>Estuans interius</li>
-            <li>Ira vehementi</li>
-            <li>SEPHIROTH!</li>
-          </ul>
-          <ul className="snes-list is-ocean-list-color">
-            <li>It's easy to forget</li>
-            <li>what a sin is</li>
-            <li>in the middle of a battlefield</li>
-          </ul>
-        </div>
-      </div>
-      <div className="snes-container has-grey-bg">
-        <h3 className="snes-container-title has-ocean-underline">Inputs</h3>
-        <div className="snes-form-group">
-          <label>Input Text</label>
-          <div className="snes-input">
-            <input type="text" value="" placeholder="Input text" />
-          </div>
-        </div>
-        <div className="snes-form-group">
-          <label>Success Input</label>
-          <div className="snes-input is-success">
-            <input
-              type="text"
-              value="This input has a correct value"
-              placeholder="Input text"
-            />
-          </div>
-        </div>
-        <div className="snes-form-group">
-          <label>Warned Input</label>
-          <div className="snes-input is-warning">
-            <input
-              type="text"
-              value="This input has a warned value"
-              placeholder="Input text"
-            />
-          </div>
-        </div>
-        <div className="snes-form-group">
-          <label>Error Input</label>
-          <div className="snes-input is-error">
-            <input
-              type="text"
-              value="This input has a incorrect value"
-              placeholder="Input text"
-            />
-          </div>
-        </div>
-        <div className="snes-form-group">
-          <label>Date input</label>
-          <div className="snes-input">
-            <input type="date" />
-          </div>
-        </div>
-      </div>
+      <TextGrid />
+      <ButtonGrid />
+      <ListGrid />
+      <InputGrid />
       <div className="snes-container has-white-bg">
         <h3 className="snes-container-title has-ember-underline">Selects</h3>
         <div className="snes-form-group">

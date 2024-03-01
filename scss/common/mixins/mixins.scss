@@ -1,7 +1,7 @@
 @import '../variables/pixels';
 @import '../variables/colors';
 
-$border-image: url('../assets/img/frame-hd.png');
+$border-image: var(--border-image);
 
 @mixin pixelize($matrix, $size, $colors) {
   $ret: '';
