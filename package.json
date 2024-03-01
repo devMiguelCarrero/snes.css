@@ -1,6 +1,6 @@
 {
   "name": "snes.css",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A retro-themed CSS framework inspired by the aesthetics of 16bit consoles",
   "private": false,
   "main": "index.js",
@@ -16,11 +16,32 @@
     "type": "git",
     "url": "https://github.com/devMiguelCarrero/snes.css"
   },
+  "bugs": {
+    "url": "https://github.com/devMiguelCarrero/snes.css/issues"
+  },
   "funding": {
     "type": "individual",
     "url": "https://www.paypal.com/donate/?hosted_button_id=RKK3G3FWEAMLU"
   },
-  "author": "Tu Nombre",
+  "keywords": [
+    "css-framework",
+    "web-development",
+    "frontend-framework",
+    "ui-component-library",
+    "responsive-design",
+    "modular-design",
+    "customizable",
+    "easy-to-use",
+    "rapid-development",
+    "styling-library",
+    "design-system",
+    "css-variables",
+    "retro-framework",
+    "snes",
+    "8bit",
+    "16bit"
+  ],
+  "author": "devMiguelarrero",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.20",
@@ -28,6 +49,7 @@
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
     "babel-plugin-prismjs": "^2.1.0",
+    "classnames": "^2.5.1",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.0.0",
     "css-minimizer-webpack-plugin": "^6.0.0",
@@ -56,8 +78,5 @@
     "dist",
     "README.md",
     "LICENSE"
-  ],
-  "dependencies": {
-    "classnames": "^2.5.1"
-  }
+  ]
 }
