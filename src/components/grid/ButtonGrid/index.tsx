@@ -13,6 +13,9 @@ const ButtonGridRaw: FC = () => {
       <button className="snes-button has-rose-color">Rose</button>
       <button className="snes-button has-galaxy-color">Galaxy</button>
       <button className="snes-button has-ember-color">Ember</button>
+      <button className="snes-button has-ember-color" disabled={true}>
+        Disabled
+      </button>
     </>
   );
 };
@@ -28,6 +31,7 @@ const ButtonGridCode = () => {
   <button class="snes-button has-rose-color">Rose</button>
   <button class="snes-button has-galaxy-color">Galaxy</button>
   <button class="snes-button has-ember-color">Ember</button>
+  <button class="snes-button has-ember-color" disabled> Disabled</button>
   `;
 };
 

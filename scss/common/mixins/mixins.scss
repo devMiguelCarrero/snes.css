@@ -63,23 +63,36 @@ $border-image: var(--border-image);
     clip-path: generate-clip-path($shadow-shine);
   }
 
-  &:hover {
-    &::before {
-      background-color: $button-hover-shadow;
-    }
-    &::after {
-      background-color: $button-hover-shine;
+  &:not(:disabled) {
+    &:hover {
+      &::before {
+        background-color: $button-hover-shadow;
+      }
+      &::after {
+        background-color: $button-hover-shine;
+      }
     }
   }
-}
 
-@mixin generate-shadow-shine-active {
-  &:active {
+  &:disabled {
     &::before {
       background-color: $button-shine;
     }
     &::after {
       background-color: $button-shadow;
+    }
+  }
+}
+
+@mixin generate-shadow-shine-active {
+  &:not(:disabled) {
+    &:active {
+      &::before {
+        background-color: $button-shine;
+      }
+      &::after {
+        background-color: $button-shadow;
+      }
     }
   }
 }

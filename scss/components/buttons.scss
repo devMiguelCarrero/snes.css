@@ -10,9 +10,16 @@
   padding: 4px 18px;
   cursor: pointer;
   display: inline-block;
+  color: $main-color;
   @include pixelated-border;
   @include button-size;
   @include set-colors;
   @include generate-shadow-shine;
   @include generate-shadow-shine-active;
+
+  &:disabled {
+    color: $color-text-hover;
+    background-color: $color-disabled;
+    cursor: not-allowed;
+  }
 }

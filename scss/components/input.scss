@@ -67,7 +67,6 @@ $icon-error-dimmension: 2px;
   &::before {
     content: '';
     position: absolute;
-
     color: $color-plumber;
     z-index: 10;
   }
@@ -129,6 +128,16 @@ $icon-error-dimmension: 2px;
         top: calc(50% - (#{w.$icon-height} * ($icon-error-dimmension)));
         @include w.warning-icon-before($icon-error-dimmension);
       }
+    }
+  }
+
+  &:has(input:disabled, select:disabled, textarea:disabled) {
+    background-color: $color-disabled;
+    cursor: not-allowed;
+
+    & > * {
+      color: $color-text-hover;
+      cursor: not-allowed;
     }
   }
 }

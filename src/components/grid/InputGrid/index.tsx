@@ -82,6 +82,17 @@ const InputGridRaw: FC = () => {
           />
         </div>
       </div>
+      <div className="snes-form-group">
+        <label>Disabled Input</label>
+        <div className="snes-input">
+          <input
+            type="text"
+            value=""
+            placeholder="You can't access to this realm yet"
+            disabled={true}
+          />
+        </div>
+      </div>
     </>
   );
 };
@@ -128,6 +139,17 @@ const InputGridCode = () => {
     <label>Date input</label>
     <div class="snes-input">
       <input type="date" value="1997-01-31" />
+    </div>
+  </div>
+  <div className="snes-form-group">
+    <label>Disabled Input</label>
+    <div className="snes-input">
+      <input
+        type="text"
+        value=""
+        placeholder="You can't access to this realm yet"
+        disabled
+      />
     </div>
   </div>
   `;
