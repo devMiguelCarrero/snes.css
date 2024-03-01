@@ -6,14 +6,12 @@ import CodeBlock from '@/components/utilities/CodeBlock';
 const TextAreaGridRaw: FC = () => {
   const [inputValue, setTextAreaValue] = useState<string>('');
   const [successValue, setSuccessValue] = useState<string>(
-    'This input fills you with determination'
+    'This success textarea fills you with determination'
   );
   const [warningValue, setWarningValue] = useState<string>(
-    "You're gonna have a bad time"
+    "if you keep going the way you are now... you're gonna have a bad time"
   );
-  const [failValue, setFailValue] = useState<string>(
-    'Atreus made a mistake, we will fix it together'
-  );
+  const [failValue, setFailValue] = useState<string>('Hesitation is defeat');
 
   return (
     <>
@@ -65,6 +63,16 @@ const TextAreaGridRaw: FC = () => {
           />
         </div>
       </div>
+      <div className="snes-form-group">
+        <label>Disabled Textarea</label>
+        <div className="snes-input">
+          <textarea
+            value=""
+            placeholder="But the future refused to change"
+            disabled={true}
+          />
+        </div>
+      </div>
     </>
   );
 };
@@ -84,7 +92,7 @@ const TextAreaGridCode = () => {
     <label>Success Textarea</label>
     <div className="snes-input is-success">
       <textarea
-        value="This input fills you with determination"
+        value="This success textarea fills you with determination"
         placeholder="Textarea text"
       />
     </div>
@@ -93,7 +101,7 @@ const TextAreaGridCode = () => {
     <label>Warned Textarea</label>
     <div className="snes-input is-warning">
       <textarea
-        value="You're gonna have a bad time"
+        value="if you keep going the way you are now... you're gonna have a bad time"
         placeholder="Textarea text"
       />
     </div>
@@ -102,7 +110,7 @@ const TextAreaGridCode = () => {
     <label>Error Textarea</label>
     <div className="snes-input is-error">
       <textarea
-        value="Atreus made a mistake, we will fix it together"
+        value="But the future refused to change"
         placeholder="Textarea text"
       />
     </div>

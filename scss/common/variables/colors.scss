@@ -25,6 +25,9 @@ $background-aged-yellow: #fcf4d9; // Aged Yellow (inspired by the yellowing of c
 $background-secondary-purple: #f0e4ff; // Secondary SNES Purple (very light, inspired by SNES's secondary color)
 $background-soft-green: #e2f4ea; // Soft Green (my suggestion, designed to be light and refreshing)
 
+//Disabled color
+$color-disabled: #b5ced1; // Grey
+
 $button-shine: background-illumination(#fff, 0.3);
 $button-shadow: background-illumination(#000, 0.2);
 $button-hover-shine: background-illumination(#fff, 0.4);

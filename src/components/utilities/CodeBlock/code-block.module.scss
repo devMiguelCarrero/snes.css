@@ -46,7 +46,6 @@
     &__code {
       &[class*='language-'] {
         @include paragraph-size;
-        white-space: pre-wrap;
       }
     }
   }
