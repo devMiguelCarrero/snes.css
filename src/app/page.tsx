@@ -1,3 +1,4 @@
+import BlockquoteGrid from '@/components/grid/BlockquoteGrid';
 import ButtonGrid from '@/components/grid/ButtonGrid';
 import CheckboxGrid from '@/components/grid/CheckboxGrid';
 import InputGrid from '@/components/grid/InputGrid';
@@ -26,6 +27,7 @@ export default function Home() {
       <RangeControlGrid />
       <RadioControlGrid />
       <CheckboxGrid />
+      <BlockquoteGrid />
     </main>
   );
 }

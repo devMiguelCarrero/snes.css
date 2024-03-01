@@ -1,0 +1,24 @@
+@import '../common/variables/colors';
+@import '../common/variables/sizes';
+
+.snes-blockquote {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: $background-white;
+  background-color: color-mix(in srgb, $background-grey, black 55%);
+  padding: $size-e-m;
+  @include pixelated-border;
+  @include generate-shadow-shine;
+
+  @include tablet-lg {
+    padding: $size-e-xxxs;
+  }
+
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-bg {
+      background-color: color-mix(in srgb, $color, black 55%);
+    }
+  }
+}
