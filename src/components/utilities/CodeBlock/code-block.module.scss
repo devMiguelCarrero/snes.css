@@ -8,6 +8,12 @@
   margin-top: 80px;
   @include paragraph-size;
 
+  @media(max-width: 998px) {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
+
   .hljs {
     vertical-align: baseline;
     padding: 30px;

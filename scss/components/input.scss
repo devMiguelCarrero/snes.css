@@ -1,6 +1,7 @@
 @use '../common/icons/error.scss' as e;
 @use '../common/icons/approve.scss' as a;
 @use '../common/icons/warning.scss' as w;
+@use '../common/icons/caret.scss' as c;
 
 @import '../common/variables/colors';
 @import '../common/variables/sizes';
@@ -10,6 +11,8 @@
 
 $input-status: ('success' $color-nature), ('warning' $color-sunshine),
   ('error' $color-plumber);
+
+$icon-error-dimmension: 2px;
 
 .snes-form-group {
   display: flex;
@@ -21,6 +24,10 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
 
   &:has(input[type='radio']) {
     gap: $size-e-xs;
+  }
+
+  &:has(input[type='range']) {
+    gap: $size-e-s;
   }
 }
 
@@ -57,8 +64,6 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
     }
   }
 
-  $icon-error-dimmension: 2px;
-
   &::before {
     content: '';
     position: absolute;
@@ -71,6 +76,33 @@ $input-status: ('success' $color-nature), ('warning' $color-sunshine),
     &.is-#{$status} {
       background-color: mix($color, white, 45%);
       color: $color;
+    }
+  }
+
+  &:has(select) {
+    &::before {
+      color: $color-phantom;
+      right: calc(0% + (#{c.$icon-width} * ($icon-error-dimmension / 1.5)));
+      top: calc(50% - (#{c.$icon-height} * ($icon-error-dimmension)));
+      @include c.caret-icon-before($icon-error-dimmension);
+    }
+
+    &.is-success {
+      &::before {
+        color: $color-nature;
+      }
+    }
+
+    &.is-warning {
+      &::before {
+        color: $color-sunshine;
+      }
+    }
+
+    &.is-error {
+      &::before {
+        color: $color-plumber;
+      }
     }
   }
 

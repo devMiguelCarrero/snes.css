@@ -2,6 +2,7 @@
   "name": "snes.css",
   "version": "0.0.1",
   "description": "A retro-themed CSS framework inspired by the aesthetics of 16bit consoles",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "snes-build": "webpack --mode production && webpack --mode development",
@@ -10,6 +11,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devMiguelCarrero/snes.css"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://www.paypal.com/donate/?hosted_button_id=RKK3G3FWEAMLU"
   },
   "author": "Tu Nombre",
   "license": "MIT",

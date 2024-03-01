@@ -6,13 +6,13 @@ import CodeBlock from '@/components/utilities/CodeBlock';
 const InputGridRaw: FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [successValue, setSuccessValue] = useState<string>(
-    'This input has a correct value'
+    'This input fills you with determination'
   );
   const [warningValue, setWarningValue] = useState<string>(
-    'This input has a warned value'
+    "You're gonna have a bad time"
   );
   const [failValue, setFailValue] = useState<string>(
-    'This input has an incorrect value'
+    'Atreus made a mistake, we will fix it together'
   );
   const [dateValue, setDateValue] = useState<string>('1997-01-31');
 
@@ -53,7 +53,7 @@ const InputGridRaw: FC = () => {
             onChange={(event) => {
               setWarningValue(event.target.value);
             }}
-            placeholder="Input text"
+            placeholder="I know what you're doing"
           />
         </div>
       </div>
@@ -109,8 +109,8 @@ const InputGridCode = () => {
     <div class="snes-input is-warning">
       <input
         type="text"
-        value="This input has a warned value"
-        placeholder="Input text"
+        value="You\'re gonna have a bad time"
+        placeholder="I know what you're doing"
       />
     </div>
   </div>
@@ -119,7 +119,7 @@ const InputGridCode = () => {
     <div class="snes-input is-error">
       <input
         type="text"
-        value="This input has a incorrect value"
+        value="Atreus made a mistake, we will fix it together"
         placeholder="Input text"
       />
     </div>

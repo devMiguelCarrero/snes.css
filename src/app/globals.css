@@ -35,6 +35,16 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media(max-width: 998px) {
+  .columns-grid.has-3-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .columns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .columns-grid .grid-item {
   padding: 15px;
 }

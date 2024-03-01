@@ -1,0 +1,51 @@
+@import '../mixins/mixins';
+@import '../variables/colors';
+@import '../mixins/mixins';
+
+$icon-width: 15;
+$icon-height: 11;
+
+$sprite: (
+  (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
+  (1, 5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8, 1),
+  (1, 4, 5, 1, 0, 0, 0, 0, 0, 0, 1, 8, 3, 1),
+  (1, 4, 4, 5, 1, 0, 0, 0, 0, 1, 8, 3, 3, 1),
+  (1, 6, 4, 4, 5, 1, 0, 0, 1, 8, 3, 3, 7, 1),
+  (0, 1, 6, 4, 4, 5, 1, 1, 8, 3, 3, 7, 1, 0),
+  (0, 0, 1, 6, 4, 4, 5, 8, 3, 3, 7, 1, 0, 0),
+  (0, 0, 0, 1, 6, 4, 4, 3, 3, 7, 1, 0, 0, 0),
+  (0, 0, 0, 0, 1, 6, 4, 3, 7, 1, 0, 0, 0, 0),
+  (0, 0, 0, 0, 0, 1, 6, 7, 1, 0, 0, 0, 0, 0),
+  (0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0)
+);
+
+$sprite-colors: (
+  #000000,
+  #ffffff,
+  currentColor,
+  color-mix(in srgb, currentColor, white 15%),
+  color-mix(in srgb, currentColor, white 35%),
+  color-mix(in srgb, currentColor, black 10%),
+  color-mix(in srgb, currentColor, black 35%),
+  color-mix(in srgb, currentColor, black 15%)
+);
+
+@mixin caret-icon($icon-pixel-dimmension) {
+  @include render-icon(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
+
+@mixin caret-icon-before($icon-pixel-dimmension) {
+  @include render-icon-before(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
