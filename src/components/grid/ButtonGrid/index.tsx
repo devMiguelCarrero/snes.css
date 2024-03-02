@@ -39,7 +39,7 @@ const ButtonGrid: FC = () => {
   return (
     <>
       <div className="snes-container has-aged-yellow-bg">
-        <h3 className="snes-container-title">Buttons</h3>
+        <h3 className="snes-container-title has-ember-underline">Buttons</h3>
         <div id="buttons" className="item-grid code-grid">
           <ButtonGridRaw />
         </div>

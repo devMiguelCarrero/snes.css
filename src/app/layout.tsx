@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import '../../dist/snes.min.css';
+import MainNavigation from '@/components/utilities/MainNavigation';
+import { menu } from '@/shared/lib/menu/menu';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
+        <MainNavigation menu={menu} />
         <>{children}</>
       </body>
     </html>

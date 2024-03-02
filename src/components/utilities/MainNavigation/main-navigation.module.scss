@@ -1,0 +1,78 @@
+@import '../../../../scss/common/variables/sizes';
+@import '../../../../scss/common/variables/colors';
+@import '../../../../scss/common/variables/typography';
+@import '../../../../scss/common/variables/transitions';
+@import '../../../../scss/common/variables/pixels';
+
+$tablet-height: $size-e-xl;
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: $size-e-xxs;
+  min-height: $size-e-l;
+  background-color: $background-white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: solid $pixel-regular #000;
+
+  @include tablet {
+    padding: $size-e-xxs $size-e-xs;
+    height: $tablet-height;
+  }
+
+  @include phone-lg {
+    padding: $size-e-xxxs;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $size-e-s;
+    @include phone-lg {
+      gap: $size-e-xxxs;
+    }
+
+    &__item {
+      list-style-type: none;
+    }
+
+    &__link {
+      @include paragraph-size;
+      display: block;
+      position: relative;
+      list-style-type: none;
+      z-index: 1;
+    }
+  }
+
+  &__toggler {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--collapse {
+      justify-content: center;
+      @include tablet {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__logo {
+    @include title-size;
+  }
+}

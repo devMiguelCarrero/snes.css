@@ -13,7 +13,11 @@
 }
 
 .main-container > * {
-  margin-bottom: 1.2rem;
+  margin-bottom: 40px;
+
+  &:first-child {
+    margin-top: 40px;
+  }
 }
 
 .item-grid {
@@ -23,7 +27,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 40px;
 }
 
 .columns-grid {
@@ -35,7 +39,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media(max-width: 998px) {
+@media (max-width: 998px) {
   .columns-grid.has-3-cols {
     grid-template-columns: 1fr;
   }
@@ -53,5 +57,3 @@ pre {
   position: relative;
   margin: 0 -60px -60px -60px;
 }
-
-

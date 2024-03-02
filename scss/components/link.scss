@@ -1,0 +1,40 @@
+@import '../common/variables/colors';
+@import '../common/variables/transitions';
+@import '../common/variables/sizes';
+@import '../common/variables/media-queries';
+
+.snes-link {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 0.2em;
+    background-color: $color-plumber;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: main-transition($attribute: width);
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  @include tablet-lg {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  @each $name, $color in $main-colors {
+    &.has-#{$name}-underline {
+      &::after {
+        background-color: $color;
+      }
+    }
+  }
+}
