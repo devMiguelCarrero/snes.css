@@ -17,7 +17,7 @@ export default function Home() {
       <h1 className="snes-container-title has-plumber-underline">SNES.CSS</h1>
       <p>
         SNES.CSS is a css framework inspired in the 90's 16bit videogames,
-        bringing a nostalgin pixel art style and taking a high learning and
+        bringing a nostalgic pixel art style and taking a high learning and
         inspiration from B.C.Rikko's framework: nes.css.
       </p>
       <h2 className="snes-container-title has-phantom-underline">
