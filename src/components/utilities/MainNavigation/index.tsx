@@ -67,35 +67,40 @@ const MainNavigation: FC<Props> = ({ variant = 'regular', menu = [] }) => {
 
   return (
     <nav className={classNames}>
-      <section className={collapseClasses}>
-        <Link className={logoClasses} href="/" title="WeKnow INC">
-          <span className="text-plumber-color">SNES</span>.
-          <span className="text-nature-color">CSS</span>
-        </Link>
-      </section>
-      <section className={nonCollapseClasses}>
-        <ul className={classes.menu}>
-          {menu.map((item, index) => {
-            const linkClasses = cx(classes.menu__link, {
-              'snes-link': true,
-              [`has-${item.color}-text-color`]: item.color,
-              [`has-${item.underline}-underline`]: item.underline,
-            });
+      <div className={classes.nav__main}>
+        <section className={collapseClasses}>
+          <Link className={logoClasses} href="/" title="WeKnow INC">
+            <span className="text-plumber-color">SNES</span>.
+            <span className="text-nature-color">CSS</span>
+          </Link>
+        </section>
+        <section className={nonCollapseClasses}>
+          <ul className={classes.menu}>
+            {menu.map((item, index) => {
+              const linkClasses = cx(classes.menu__link, {
+                'snes-link': true,
+                [`has-${item.color}-text-color`]: item.color,
+                [`has-${item.underline}-underline`]: item.underline,
+              });
 
-            return (
-              <li className={classes.menu__item} key={`${item.href}-${index}`}>
-                <Link
-                  className={linkClasses}
-                  href={item.href}
-                  title={item.title}
+              return (
+                <li
+                  className={classes.menu__item}
+                  key={`${item.href}-${index}`}
                 >
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+                  <Link
+                    className={linkClasses}
+                    href={item.href}
+                    title={item.title}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </div>
     </nav>
   );
 };

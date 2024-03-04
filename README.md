@@ -47,9 +47,9 @@ Write this line of code inside the </head> tag of your HTML code
 <link rel="stylesheet" href="https://unpkg.com/snes.css@1.0.1/dist/snes.min.css">
 ```
 
-## Documentation
+## Usage
 
-For detailed documentation on how to use each component, visit the (Main Documentation)[https://snes-css.sadlative.com/].
+For detailed documentation on how to use each component, visit the [Main Documentation](https://snes-css.sadlative.com/).
 
 ## Contributing
 
@@ -61,4 +61,4 @@ snes.css Framework is released under the MIT License. See the LICENSE file for m
 
 ## Acknowledgements
 
-This project is inspired by the classic Super Nintendo games and the pixel art community. Special thanks to all the retro gaming enthusiasts and designers who keep the spirit alive.
+This project is inspired by the classic 16bit games and the pixel art community. Special thanks to all the retro gaming enthusiasts and designers who keep the spirit alive.
