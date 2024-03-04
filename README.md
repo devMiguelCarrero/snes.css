@@ -35,7 +35,7 @@ yarn i snes.css
 Write this line of code inside the </head> tag of your HTML code
 
 ```bash
-<link rel="stylesheet" href="path/to/snes-css-framework/dist/css/snes.min.css">
+<link rel="stylesheet" href="https://unpkg.com/snes.css@1.0.0/dist/snes.min.css">
 ```
 
 ## Documentation
