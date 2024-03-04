@@ -314,32 +314,32 @@ const RadioControlGridCode = () => {
       </label>
     </div>
   </div>
-  <div className="snes-form-group">
+  <div class="snes-form-group">
     <label>SELECT DIFICULTY</label>
-    <div className="snes-radio snes-radio--vertical">
-      <label className="snes-radio__item has-turquoise-icon">
+    <div class="snes-radio snes-radio--vertical">
+      <label class="snes-radio__item has-turquoise-icon">
         <input type="radio" name="dificulty" value="easiest" checked />
         <span className="snes-radio__item__content">easiest</span>
       </label>
-      <label className="snes-radio__item has-nature-icon">
+      <label class="snes-radio__item has-nature-icon">
         <input type="radio" name="dificulty" value="easy" />
-        <span className="snes-radio__item__content">easy</span>
+        <span class="snes-radio__item__content">easy</span>
       </label>
-      <label className="snes-radio__item has-galaxy-icon">
+      <label class="snes-radio__item has-galaxy-icon">
         <input type="radio" name="dificulty" value="balanced" />
-        <span className="snes-radio__item__content">balanced</span>
+        <span class="snes-radio__item__content">balanced</span>
       </label>
-      <label className="snes-radio__item has-ember-icon">
+      <label class="snes-radio__item has-ember-icon">
         <input type="radio" name="dificulty" value="hard" />
-        <span className="snes-radio__item__content">hard</span>
+        <span class="snes-radio__item__content">hard</span>
       </label>
-      <label className="snes-radio__item has-plumber-icon">
+      <label class="snes-radio__item has-plumber-icon">
         <input type="radio" name="dificulty" value="agent-00" />
         <span className="snes-radio__item__content">00 Agent</span>
       </label>
-      <label className="snes-radio__item has-phantom-icon">
+      <label class="snes-radio__item has-phantom-icon">
         <input type="radio" name="dificulty" value="god-of-war" />
-        <span className="snes-radio__item__content">god of war</span>
+        <span class="snes-radio__item__content">god of war</span>
       </label>
     </div>
   </div>

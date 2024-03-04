@@ -79,36 +79,36 @@ const TextAreaGridRaw: FC = () => {
 
 const TextAreaGridCode = () => {
   return `
-  <div className="snes-form-group">
+  <div class="snes-form-group">
     <label>Textarea</label>
-    <div className="snes-input">
+    <div class="snes-input">
       <textarea
         value=""
         placeholder=""
       />
     </div>
   </div>
-  <div className="snes-form-group">
+  <div class="snes-form-group">
     <label>Success Textarea</label>
-    <div className="snes-input is-success">
+    <div class="snes-input is-success">
       <textarea
         value="This success textarea fills you with determination"
         placeholder="Textarea text"
       />
     </div>
   </div>
-  <div className="snes-form-group">
+  <div class="snes-form-group">
     <label>Warned Textarea</label>
-    <div className="snes-input is-warning">
+    <div class="snes-input is-warning">
       <textarea
         value="if you keep going the way you are now... you're gonna have a bad time"
         placeholder="Textarea text"
       />
     </div>
   </div>
-  <div className="snes-form-group">
+  <div class="snes-form-group">
     <label>Error Textarea</label>
-    <div className="snes-input is-error">
+    <div class="snes-input is-error">
       <textarea
         value="But the future refused to change"
         placeholder="Textarea text"

@@ -25,19 +25,19 @@ const BlockquoteGridRaw: FC = () => {
 
 const BlockquoteGridCode: FC = () => {
   return `
-  <blockquote className="snes-blockquote">
+  <blockquote class="snes-blockquote">
     <p>Papers, please!</p>
   </blockquote>
-  <blockquote className="snes-blockquote has-plumber-bg">
+  <blockquote class="snes-blockquote has-plumber-bg">
     <p>What is a man? A miserable little pile of secrets.</p>
   </blockquote>
-  <blockquote className="snes-blockquote has-phantom-bg">
+  <blockquote class="snes-blockquote has-phantom-bg">
     <p>
       Once something's alive... it doesn't die easy... You have to bury
       every last cinder!
     </p>
   </blockquote>
-  <blockquote className="snes-blockquote has-ember-bg">
+  <blockquote class="snes-blockquote has-ember-bg">
     <p>No gods or kings. Only man.</p>
   </blockquote>
   `;

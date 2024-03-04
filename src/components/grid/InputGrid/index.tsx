@@ -141,9 +141,9 @@ const InputGridCode = () => {
       <input type="date" value="1997-01-31" />
     </div>
   </div>
-  <div className="snes-form-group">
+  <div class="snes-form-group">
     <label>Disabled Input</label>
-    <div className="snes-input">
+    <div class="snes-input">
       <input
         type="text"
         value=""
