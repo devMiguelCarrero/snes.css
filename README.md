@@ -23,14 +23,23 @@ You can install SNES.CSS via npm or directly via CDN.
 
 ### Via npm/yarn
 
+- Install the package
+
 ```bash
 npm i snes.css
 ```
+
 ```bash
 yarn i snes.css
 ```
 
-### Via import directly from CDN
+- Import the main snes.min.css once from your main application file:
+
+```bash
+import 'snes.css/dist/snes.min.css';
+```
+
+### Import directly from CDN
 
 Write this line of code inside the </head> tag of your HTML code
 
