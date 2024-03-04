@@ -1,6 +1,6 @@
-# SNES.css Framework
+# snes.css Framework
 
-Welcome to SNX.css Framework, a unique CSS framework inspired by the nostalgic aesthetics of the Super Nintendo era. This project aims to bring the charm of pixel art and retro gaming to modern web design, offering developers and designers a toolkit to create websites with a vintage flair.
+Welcome to snes.css Framework, a unique CSS framework inspired by the nostalgic aesthetics of the Super Nintendo era. This project aims to bring the charm of pixel art and retro gaming to modern web design, offering developers and designers a toolkit to create websites with a vintage flair.
 
 ## Features
 
@@ -11,29 +11,44 @@ Welcome to SNX.css Framework, a unique CSS framework inspired by the nostalgic a
 
 ## Getting Started
 
-To get started with SNX.css Framework, simply clone this repository and integrate the CSS into your project.
+To get started with snes.css Framework, simply clone this repository and integrate the CSS into your project.
 
 ```bash
-git clone https://yourrepositoryurl.git
+git clone https://github.com/devMiguelCarrero/snes.css
 ```
 
-## Include the SNX.css stylesheet in your HTML to begin using the components:
+## How to use this framework
+
+You can install SNES.CSS via npm or directly via CDN.
+
+### Via npm/yarn
 
 ```bash
-<link rel="stylesheet" href="path/to/snx-css-framework/dist/css/snx.css.min.css">
+npm i snes.css
+```
+```bash
+yarn i snes.css
+```
+
+### Via import directly from CDN
+
+Write this line of code inside the </head> tag of your HTML code
+
+```bash
+<link rel="stylesheet" href="path/to/snes-css-framework/dist/css/snes.min.css">
 ```
 
 ## Documentation
 
-For detailed documentation on how to use each component, visit [Documentation URL].
+For detailed documentation on how to use each component, visit the (Main Documentation)[https://snes-css.sadlative.com/].
 
 ## Contributing
 
-We welcome contributions! If you're interested in helping SNX.css Framework grow, please read our contributing guidelines and open a pull request.
+We welcome contributions! If you're interested in helping snes.css Framework grow, please read our contributing guidelines and open a pull request.
 
 ## License
 
-SNX.css Framework is released under the MIT License. See the LICENSE file for more details.
+snes.css Framework is released under the MIT License. See the LICENSE file for more details.
 
 ## Acknowledgements
 

@@ -93,3 +93,11 @@ export default function AboutPage() {
     </main>
   );
 }
+
+export const generateMetadata = async () => {
+  return {
+    title: 'About',
+    description:
+      "I was deeply influenced by B.C.Rikko's framework NES.CSS and his 8bit looking appearace.",
+  };
+};

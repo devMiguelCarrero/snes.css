@@ -35,3 +35,11 @@ export default function DonatePage() {
     </main>
   );
 }
+
+export const generateMetadata = async () => {
+  return {
+    title: 'Donate',
+    description:
+      'Your donation would greatly support my ongoing efforts to contribute valuable work to the internet. I would be deeply grateful for your support',
+  };
+};
