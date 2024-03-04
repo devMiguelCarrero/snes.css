@@ -1,0 +1,9 @@
+@import '../common/mixins/mixins';
+@import '../common/variables/colors';
+
+.snes-image {
+  max-width: 100%;
+  height: auto;
+  @include pixelated-border;
+  border-image-outset: 0;
+}

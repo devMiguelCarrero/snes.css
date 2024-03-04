@@ -62,7 +62,7 @@
     "html-webpack-plugin": "^5.0.0",
     "mini-css-extract-plugin": "^2.0.0",
     "next": "^14.1.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8",
     "postcss-loader": "^8.1.0",
     "pretty": "^2.0.0",
     "prismjs": "^1.29.0",
@@ -80,5 +80,8 @@
     "dist",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "dependencies": {
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e"
+  }
 }
