@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-all": "next build && webpack --mode production && webpack --mode development"
+    "build-all": "webpack --mode production && webpack --mode development && next build"
   },
   "repository": {
     "type": "git",
