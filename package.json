@@ -1,6 +1,6 @@
 {
   "name": "snes.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A retro-themed CSS framework inspired by the aesthetics of 16bit consoles",
   "private": false,
   "main": "index.js",
