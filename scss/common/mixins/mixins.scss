@@ -110,6 +110,8 @@ $border-image: var(--border-image);
   $icon-margin-x: $icon-x-center-formula - $icon-pixel-dimmension;
 
   position: relative;
+  width: $icon-pixel-dimmension;
+  height: $icon-pixel-dimmension;
 
   margin: $icon-margin-y $icon-margin-x;
   &::before {

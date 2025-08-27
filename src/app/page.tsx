@@ -1,6 +1,7 @@
 import BlockquoteGrid from '@/components/grid/BlockquoteGrid';
 import ButtonGrid from '@/components/grid/ButtonGrid';
 import CheckboxGrid from '@/components/grid/CheckboxGrid';
+import IconGrid from '@/components/grid/IconGrid';
 import InputGrid from '@/components/grid/InputGrid';
 import LinkGrid from '@/components/grid/LinkGrid';
 import ListGrid from '@/components/grid/ListGrid';
@@ -16,9 +17,10 @@ export default function Home() {
     <main className="main-container">
       <h1 className="snes-container-title has-plumber-underline">SNES.CSS</h1>
       <p>
-        SNES.CSS is a css framework inspired in the 90's 16bit videogames,
-        bringing a nostalgic pixel art style and taking a high learning and
-        inspiration from B.C.Rikko's framework: nes.css.
+        SNES.CSS is a css framework made with{' '}
+        <i className="snes-icon icon-heart"></i> and inspired in the 90's 16bit
+        videogames, bringing a nostalgic pixel art style and taking a high
+        learning and inspiration from B.C.Rikko's framework: nes.css.
       </p>
       <h2 className="snes-container-title has-phantom-underline">
         Installation
@@ -38,7 +40,8 @@ export default function Home() {
       <h2 className="snes-container-title has-ocean-underline">Details</h2>
       <p>
         <span className="text-ember-color">
-          This framework doesn't provides layout styles or javascript code
+          <i className="snes-icon icon-warning"></i> This framework doesn't
+          provides layout styles or javascript code
         </span>
         , this makes it a nice fit with modern frameworks integrations such as
         React.js or Tailwind.
@@ -54,6 +57,7 @@ export default function Home() {
       <RadioControlGrid />
       <CheckboxGrid />
       <BlockquoteGrid />
+      <IconGrid />
     </main>
   );
 }

@@ -1,0 +1,31 @@
+@use '../common/icons/heart' as h;
+@use '../common/icons/warning' as w;
+@use '../common/icons/star' as s;
+@import '../common/variables/colors.scss';
+
+.snes-icon {
+  position: relative;
+  font-size: 1.2em;
+  display: inline-flex;
+
+  &.icon-heart {
+    &::before {
+      color: $color-plumber;
+    }
+    @include h.heart-icon(calc(1.2em / 14));
+  }
+
+  &.icon-warning {
+    &::before {
+      color: $color-plumber;
+    }
+    @include w.warning-icon(calc(1.2em / 16));
+  }
+
+  &.icon-star {
+    &::before {
+      color: $color-sunshine;
+    }
+    @include s.star-icon(calc(1.2em / 16));
+  }
+}

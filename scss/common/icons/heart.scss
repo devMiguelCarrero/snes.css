@@ -1,0 +1,50 @@
+@import '../mixins/mixins';
+@import '../variables/colors';
+@import '../mixins/mixins';
+
+$icon-width: 16;
+$icon-height: 14;
+
+$sprite: (
+  (0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0),
+  (0, 0, 1, 4, 4, 4, 1, 0, 1, 4, 4, 4, 1, 0, 0),
+  (0, 1, 4, 2, 4, 4, 5, 1, 4, 4, 2, 4, 3, 1, 0),
+  (1, 4, 2, 3, 3, 3, 3, 5, 3, 3, 3, 3, 5, 5, 1),
+  (1, 4, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 1),
+  (1, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 1),
+  (0, 1, 4, 2, 3, 3, 3, 3, 3, 3, 3, 5, 5, 1, 0),
+  (0, 0, 1, 4, 4, 3, 3, 3, 3, 3, 5, 5, 1, 0, 0),
+  (0, 0, 0, 1, 4, 4, 3, 3, 3, 5, 5, 1, 0, 0, 0),
+  (0, 0, 0, 0, 1, 4, 4, 3, 5, 5, 1, 0, 0, 0, 0),
+  (0, 0, 0, 0, 0, 1, 4, 3, 5, 1, 0, 0, 0, 0, 0),
+  (0, 0, 0, 0, 0, 0, 1, 5, 1, 0, 0, 0, 0, 0, 0),
+  (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+);
+
+$sprite-colors: (
+  #000000,
+  #ffffff,
+  currentColor,
+  color-mix(in srgb, currentColor, white 20%),
+  color-mix(in srgb, currentColor, black 30%)
+);
+
+@mixin heart-icon($icon-pixel-dimmension) {
+  @include render-icon(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
+
+@mixin heart-icon-before($icon-pixel-dimmension) {
+  @include render-icon-before(
+    $icon-pixel-dimmension,
+    $icon-width,
+    $icon-height,
+    $sprite,
+    $sprite-colors
+  );
+}
