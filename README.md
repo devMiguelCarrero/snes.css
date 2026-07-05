@@ -30,7 +30,7 @@ npm i snes.css
 ```
 
 ```bash
-yarn i snes.css
+yarn add snes.css
 ```
 
 - Import the main snes.min.css once from your main application file:
